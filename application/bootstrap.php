@@ -60,6 +60,7 @@ if (isset($_ENV['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => '/',
+	'index_file' => FALSE,
 ));
 
 /**
@@ -76,16 +77,9 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'oauth'      => MODPATH.'oauth',      // OAuth authentication
-	// 'pagination' => MODPATH.'pagination', // Paging of results
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'kostache'   => MODPATH.'kostache',   // Mustache templates
+	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
 	));
 
 /**
@@ -98,14 +92,11 @@ Route::set('default', '(<controller>(/<action>(/<id>)))')
 		'action'     => 'index',
 	));
 
-if ( ! defined('SUPPRESS_REQUEST'))
-{
-	/**
-	 * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
-	 * If no source is specified, the URI will be automatically detected.
-	 */
-	echo Request::instance()
-		->execute()
-		->send_headers()
-		->response;
-}
+/**
+ * Execute the main request. A source of the URI can be passed, eg: $_SERVER['PATH_INFO'].
+ * If no source is specified, the URI will be automatically detected.
+ */
+echo Request::instance()
+	->execute()
+	->send_headers()
+	->response;
