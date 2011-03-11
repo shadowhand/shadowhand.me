@@ -4,3 +4,6 @@
 [submodule "modules/kostache"]
 	path = modules/kostache
 	url = https://github.com/zombor/KOstache.git
+[submodule "modules/uuid"]
+	path = modules/uuid
+	url = https://github.com/shadowhand/uuid.git
