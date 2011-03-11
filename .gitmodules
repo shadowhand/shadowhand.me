@@ -10,3 +10,6 @@
 [submodule "modules/database"]
 	path = modules/database
 	url = https://github.com/kohana/database.git
+[submodule "media/less"]
+	path = media/less
+	url = git://github.com/shadowhand/lessblue.git
