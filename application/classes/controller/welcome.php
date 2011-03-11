@@ -4,7 +4,7 @@ class Controller_Welcome extends Controller {
 
 	public function action_index()
 	{
-		$this->request->response = 'hello, world!';
+		$this->request->response = Kohana::debug('shadowhand.me');
 	}
 
 } // End Welcome
