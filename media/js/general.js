@@ -21,7 +21,10 @@ $(function(){
 						$('<img width="32" height="32" />').attr('src', 'http://www.gravatar.com/avatar/'+ item.payload.actor_gravatar +'?s=32')
 					),
 					$('<span class="tweet_time"></span>').html(
-							$('<a></a>').attr('href', item.url).html(item.created_at)
+							$('<a></a>')
+							  .attr('href', item.url)
+							  .attr('datetime', item.created_at)
+							  .html(item.created_at)
 					),
 					'<span class="tweet_text">'
 						+ item.payload.size + ' commit'+ (item.payload.size != 1 ? 's' : '') +' to '
