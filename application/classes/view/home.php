@@ -6,14 +6,19 @@ class View_Home extends Kostache {
 
 	public $charset = 'utf-8';
 
+	public $environment = 'development';
+
 	public $production = FALSE;
+
+	public $php = PHP_VERSION;
 
 	public function render()
 	{
 		$this->base    = Kohana::$base_url;
 		$this->charset = Kohana::$charset;
 
-		$this->production = (Kohana::$environment === Kohana::PRODUCTION);
+		$this->environment = Kohana::$environment;
+		$this->production  = (Kohana::$environment === Kohana::PRODUCTION);
 
 		return parent::render();
 	}
