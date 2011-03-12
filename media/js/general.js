@@ -48,7 +48,7 @@ $(function(){
 		});
 
 		listed
-			.find('.tweet_time a').clockwinder({ attr:false, alwaysRelative:true }).end()
+			.find('.tweet_time a').clockwinder({ alwaysRelative:true }).end()
 			.children('li:first').addClass('tweet_first').end()
 			.children('li:even').addClass('tweet_odd').end()
 			.children('li:odd').addClass('tweet_even').end()
