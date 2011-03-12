@@ -20,8 +20,6 @@ class View_Home extends Kostache {
 		$this->environment = Kohana::$environment;
 		$this->production  = (Kohana::$environment === Kohana::PRODUCTION);
 
-		$this->env = print_r($_ENV, TRUE);
-
 		return parent::render();
 	}
 
