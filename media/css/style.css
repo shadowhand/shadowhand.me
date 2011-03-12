@@ -1,4 +1,28 @@
 html { background: #eee; }
-body { width: 40em; margin: 0 auto; padding: 2em 0; }
-footer { font-size: 0.8em; text-align: right; }
+body { width: 62em; margin: 0 auto; padding: 2em; border: solid 0 #ddd; border-width: 1em 0; }
+#head { color: #777; }
+#head h1 { font-family: 'Dancing Script', Helvetica, Arial, sans-serif; font-size: 3em; }
+#main { float: left; width: 30em; }
+#side { float: right; width: 30em; }
+footer { clear: both; padding: 1em 0; font-size: 0.8em; text-align: right; }
 footer span { float: left; }
+
+#fork-me {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 149px;
+	height: 149px;
+	background: transparent url(http://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png) 0 0 no-repeat;
+	text-align: left;
+	text-indent: -3000em;
+}
+
+.project { padding: 1em; margin: 0 -1em; }
+.project:nth-child(odd) { background: #fff; }
+.project .title { margin: 0 0 0.4em; text-align: right; overflow: auto; }
+.project .title a { float: left; }
+.project .title .language { font-size: 0.6em; }
+.project .meta .website { float: right; }

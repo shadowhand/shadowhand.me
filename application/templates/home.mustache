@@ -9,18 +9,20 @@
 	<meta name="description" content="woody gilk, newood, shadowhand, programmer, geek, kohana framework, grand marais, minnesota, mn">
 	<meta name="author" content="Woody Gilk">
 
-	<!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+	<link rel="shortcut icon" href="media/img/favicon.png">
 	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
 	<link rel="stylesheet" href="media/less/css/typo.css">
 	<link rel="stylesheet" href="media/tweet/css/jquery.tweet.css">
 	<link rel="stylesheet" href="media/css/style.css?v=1.0">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script">
 
 	<script src="media/js/modernizr-1.6.min.js"></script>
 </head>
 <body class="home">
-	<header id="hd1">
+	<header id="head">
 		<h1>i am shadowhand</h1>
+		<p class="intro">i build web stuff, buy organic food, and drink a lot of tea.</p>
 		{{!
 		<nav>
 			<ul>
@@ -31,30 +33,45 @@
 			</ul>
 		</nav>
 		}}
-	</header><!-- #hd1 -->
+	</header>
 
 	<div id="main">
-		<section>
-		<p>nothing to see here, move along.</p>
+		{{#projects}}
+		<section class="project">
+			<h3 class="title"><a href="{{url}}">{{name}}</a> {{#language}}<small class="language">{{language}}</small>{{/language}}</h3>
+			<p class="description">{{description}}</p>
+			<aside class="meta">
+				{{#homepage}}
+				<span class="website"><a href="{{homepage}}">website</a></span>
+				{{/homepage}}
+				<span class="forks">{{forks}} forks</span>
+				<span class="watchers">{{watchers}} watchers</span>
+				<span class="issues">{{open_issues}} issues</span>
+			</aside>
 		</section>
-	</div><!-- #main -->
+		{{/projects}}
+	</div>
 
-	<aside id="sidebar">
-		<h6>twitter feed</h6>
+	<aside id="side">
+		<h6 class="top">twitter feed</h6>
 		<div id="tweets" class="query">
 			<p><a href="http://twitter.com/shadowhand">follow me on twitter</a></p>
 		</div>
+
 		<h6>github activity</h6>
 		<div id="github" class="query">
-			<p><a href="http://github.com/shadowhand">my github page</a></p>
+			<p><a href="http://github.com/shadowhand">my github activity</a></p>
 		</div>
 	</aside>
 
-	<footer id="f1">
-	<p><span>copyright &copy; 2011 <a href="http://about.me/shadowhand">shadowhand</a></span> <small>{{environment}} // {{php}}</small></p>
-	</footer><!-- #f1 -->
+	<footer>
+		<p class="top bottom">
+			<span>copyright &copy; 2011 shadowhand</span>
+			<small>{{environment}} // {{php}}</small>
+		</p>
+		<a id="fork-me" href="http://github.com/shadowhand/shadowhand.me">fork me on github!</a>
+	</footer>
 
-<!-- jQuery version might not be the latest; check jquery.com -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="media/js/jquery.min.js"%3E%3C/script%3E'))</script>
 <script src="media/tweet/js/jquery.tweet.js"></script>
@@ -72,5 +89,6 @@ var _gaq = [['_setAccount', 'UA-21978772-1'], ['_trackPageview']];
 })(document, 'script');
 </script>
 {{/production}}
+
 </body>
 </html>

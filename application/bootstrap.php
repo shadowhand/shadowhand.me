@@ -61,6 +61,16 @@ Kohana::init(array(
 ));
 
 /**
+ * Write logs when adding items.
+ */
+Kohana_Log::$write_on_add = TRUE;
+
+/**
+ * Signed cookie salt.
+ */
+Cookie::$salt = 'v,8mnGqBt}gbays?NX2L';
+
+/**
  * Attach the file write to logging. Multiple writers are supported.
  */
 Kohana::$log->attach(new Kohana_Log_File(APPPATH.'logs'));
