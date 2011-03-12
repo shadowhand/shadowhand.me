@@ -16,3 +16,6 @@
 [submodule "media/tweet"]
 	path = media/tweet
 	url = git://github.com/shadowhand/tweet.git
+[submodule "media/clockwinder"]
+	path = media/clockwinder
+	url = git://github.com/shadowhand/jquery.clockwinder.git

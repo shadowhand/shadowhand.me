@@ -14,14 +14,14 @@ $(function(){
 
 		$.each(feed, function(i, item)
 		{
-			if (item.type == 'PushEvent')
+			if (item.type == 'PushEvent' && item.payload.size && item.url)
 			{
 				commits.push([
 					$('<a class="tweet_avatar"></a>').attr('href', 'https://github.com/'+ item.actor).html(
 						$('<img width="32" height="32" />').attr('src', 'http://www.gravatar.com/avatar/'+ item.payload.actor_gravatar +'?s=32')
 					),
 					$('<span class="tweet_time"></span>').html(
-						$('<a></a>').attr('href', item.url).html(item.created_at)
+							$('<a></a>').attr('href', item.url).html(item.created_at)
 					),
 					'<span class="tweet_text">'
 						+ item.payload.size + ' commit'+ (item.payload.size != 1 ? 's' : '') +' to '
@@ -45,7 +45,7 @@ $(function(){
 		});
 
 		listed
-			.find('.tweet_time a').clockwinder({attr:false}).end()
+			.find('.tweet_time a').clockwinder({ attr:false, alwaysRelative:true }).end()
 			.children('li:first').addClass('tweet_first').end()
 			.children('li:even').addClass('tweet_odd').end()
 			.children('li:odd').addClass('tweet_even').end()
