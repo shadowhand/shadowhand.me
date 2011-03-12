@@ -13,3 +13,6 @@
 [submodule "media/less"]
 	path = media/less
 	url = git://github.com/shadowhand/lessblue.git
+[submodule "media/tweet"]
+	path = media/tweet
+	url = git://github.com/shadowhand/tweet.git
