@@ -2,6 +2,17 @@
 
 class Controller_Welcome extends Controller_Website {
 
+	public $demos = array();
+
+	public function before()
+	{
+		$this->demos = array(
+			'bonafide' => Route::url('bonafide'),
+		);
+
+		return parent::before();
+	}
+
 	public function action_index()
 	{
 		$this->view = Kostache::factory('home')
@@ -24,6 +35,14 @@ class Controller_Welcome extends Controller_Website {
 
 		// Load up the project data
 		$projects = json_decode($projects['data'])->repositories;
+
+		foreach ($projects as & $project)
+		{
+			if (isset($this->demos[$project->name]))
+			{
+				$project->demo = $this->demos[$project->name];
+			}
+		}
 	}
 
 	public function projects($shutdown = TRUE)

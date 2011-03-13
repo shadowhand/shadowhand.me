@@ -41,9 +41,14 @@
 			<h3 class="title"><a href="{{url}}">{{name}}</a> {{#language}}<small class="language">{{language}}</small>{{/language}}</h3>
 			<p class="description">{{description}}</p>
 			<aside class="meta">
-				{{#homepage}}
-				<span class="website"><a href="{{homepage}}">website</a></span>
-				{{/homepage}}
+				<span class="website">
+					{{#demo}}
+					<a href="{{demo}}">demo</a>
+					{{/demo}}
+					{{#homepage}}
+					<a href="{{homepage}}">website</a>
+					{{/homepage}}
+				</span>
 				<span class="forks">{{forks}} forks</span>
 				<span class="watchers">{{watchers}} watchers</span>
 				<span class="issues">{{open_issues}} issues</span>
