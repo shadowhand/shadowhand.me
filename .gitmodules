@@ -19,3 +19,6 @@
 [submodule "media/clockwinder"]
 	path = media/clockwinder
 	url = git://github.com/shadowhand/jquery.clockwinder.git
+[submodule "modules/bonafide"]
+	path = modules/bonafide
+	url = https://github.com/shadowhand/bonafide.git
