@@ -12,13 +12,13 @@
 	url = https://github.com/kohana/database.git
 [submodule "media/less"]
 	path = media/less
-	url = git://github.com/shadowhand/lessblue.git
+	url = https://github.com/shadowhand/lessblue.git
 [submodule "media/tweet"]
 	path = media/tweet
-	url = git://github.com/shadowhand/tweet.git
+	url = https://github.com/shadowhand/tweet.git
 [submodule "media/clockwinder"]
 	path = media/clockwinder
-	url = git://github.com/shadowhand/jquery.clockwinder.git
+	url = https://github.com/intridea/jquery.clockwinder.git
 [submodule "modules/bonafide"]
 	path = modules/bonafide
 	url = https://github.com/shadowhand/bonafide.git
