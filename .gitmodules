@@ -22,3 +22,6 @@
 [submodule "modules/bonafide"]
 	path = modules/bonafide
 	url = https://github.com/shadowhand/bonafide.git
+[submodule "modules/oauth"]
+	path = modules/oauth
+	url = https://github.com/kohana/oauth.git
