@@ -88,6 +88,9 @@ Kohana::modules(array(
 	// 'database'   => MODPATH.'database',   // Database access
 	'kostache'   => MODPATH.'kostache',   // Mustache templates
 	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
+	'oauth'      => MODPATH.'oauth',      // OAuth Authentication
+	'demos'      => MODPATH.'apis/demo',    // API Demos
+	'twitter'    => MODPATH.'apis/twitter', // Twitter
 	));
 
 /**
