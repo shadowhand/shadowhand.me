@@ -25,3 +25,6 @@
 [submodule "modules/oauth"]
 	path = modules/oauth
 	url = https://github.com/kohana/oauth.git
+[submodule "modules/apis"]
+	path = modules/apis
+	url = https://github.com/shadowhand/apis.git
