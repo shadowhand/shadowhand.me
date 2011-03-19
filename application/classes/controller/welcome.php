@@ -8,6 +8,7 @@ class Controller_Welcome extends Controller_Website {
 	{
 		$this->demos = array(
 			'bonafide' => Route::url('bonafide'),
+			'apis'     => Route::url('apidemo', array('controller' => 'twitter')),
 		);
 
 		return parent::before();
