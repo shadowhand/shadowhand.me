@@ -4,6 +4,10 @@ body { width: 62em; margin: 0 auto; padding: 2em; border: solid 0 #ddd; border-w
 #head h1 { font-family: 'Dancing Script', Helvetica, Arial, sans-serif; font-size: 3em; }
 #main { float: left; width: 30em; }
 #side { float: right; width: 30em; }
+	#side .pledgie {
+		float: right;
+		margin: 0 0 0.2em 1em;
+	}
 footer { clear: both; padding: 1em 0; font-size: 0.8em; text-align: right; }
 footer span { float: left; }
 

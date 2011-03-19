@@ -12,6 +12,14 @@ class View_Home extends Kostache {
 
 	public $php = PHP_VERSION;
 
+	public function pledgie()
+	{
+		return array(
+			'link' => 'http://www.pledgie.com/campaigns/14931',
+			'image' => 'http://www.pledgie.com/campaigns/14931.png?skin_name=chrome',
+		);
+	}
+
 	public function render()
 	{
 		$this->base    = Kohana::$base_url;

@@ -23,8 +23,7 @@
 	<header id="head">
 		<h1>i am shadowhand</h1>
 		<p class="intro">
-			i build web stuff, buy organic food, and drink a lot of tea.<br/>
-			<span class="shameless">if you like my stuff, maybe you could <a href="http://amzn.com/w/1474H3P2204L8">buy me a beer</a>.</span>
+			i build web stuff, buy organic food, and drink a lot of tea.
 		</p>
 		{{!
 		<nav>
@@ -61,7 +60,14 @@
 	</div>
 
 	<aside id="side">
-		<h6 class="top">twitter feed</h6>
+		<p class="shameless">
+			{{#pledgie}}
+			<a href="{{link}}" class="pledgie"><img src="{{image}}" width="149" height="37" alt="Contribute to my Pledgie account"></a>
+			{{/pledgie}}
+			if you like my stuff, maybe you could <a href="http://amzn.com/w/1474H3P2204L8">buy me something</a> or donate a little.
+		</p>
+
+		<h6>twitter feed</h6>
 		<div id="tweets" class="query">
 			<p><a href="http://twitter.com/shadowhand">follow me on twitter</a></p>
 		</div>
