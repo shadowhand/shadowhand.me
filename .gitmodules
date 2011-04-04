@@ -28,3 +28,6 @@
 [submodule "modules/apis"]
 	path = modules/apis
 	url = https://github.com/shadowhand/apis.git
+[submodule "modules/email"]
+	path = modules/email
+	url = https://github.com/shadowhand/email.git
