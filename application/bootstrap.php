@@ -86,6 +86,7 @@ Kohana::$config->attach(new Kohana_Config_File);
 Kohana::modules(array(
 	'bonafide'   => MODPATH.'bonafide',   // Bonafide authentication
 	// 'database'   => MODPATH.'database',   // Database access
+	'email'      => MODPATH.'email',      // Emailer
 	'kostache'   => MODPATH.'kostache',   // Mustache templates
 	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
 	'oauth'      => MODPATH.'oauth',      // OAuth Authentication
