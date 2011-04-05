@@ -84,13 +84,13 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+	'demos'      => MODPATH.'demo',         // Module demos
 	'bonafide'   => MODPATH.'bonafide',   // Bonafide authentication
 	// 'database'   => MODPATH.'database',   // Database access
 	'email'      => MODPATH.'email',      // Emailer
 	'kostache'   => MODPATH.'kostache',   // Mustache templates
 	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
 	'oauth'      => MODPATH.'oauth',      // OAuth Authentication
-	'demos'      => MODPATH.'apis/demo',    // API Demos
 	'twitter'    => MODPATH.'apis/twitter', // Twitter
 	));
 
