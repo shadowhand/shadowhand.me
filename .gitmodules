@@ -31,3 +31,6 @@
 [submodule "modules/email"]
 	path = modules/email
 	url = https://github.com/shadowhand/email.git
+[submodule "modules/demo"]
+	path = modules/demo
+	url = https://github.com/shadowhand/demo.git
