@@ -34,3 +34,6 @@
 [submodule "modules/demo"]
 	path = modules/demo
 	url = https://github.com/shadowhand/demo.git
+[submodule "modules/purifier"]
+	path = modules/purifier
+	url = git://github.com/shadowhand/purifier.git
