@@ -92,6 +92,7 @@ Kohana::modules(array(
 	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
 	'oauth'      => MODPATH.'oauth',      // OAuth Authentication
 	'twitter'    => MODPATH.'apis/twitter', // Twitter
+	'github'     => MODPATH.'apis/github',  // Github
 	'purifier'   => MODPATH.'purifier',     // HTML Purifier
 	));
 
