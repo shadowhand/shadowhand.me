@@ -84,6 +84,7 @@ Kohana::$config->attach(new Kohana_Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
+	'env'        => MODPATH.'env',        // Configuration from $_ENV
 	'demos'      => MODPATH.'demo',         // Module demos
 	'bonafide'   => MODPATH.'bonafide',   // Bonafide authentication
 	// 'database'   => MODPATH.'database',   // Database access
