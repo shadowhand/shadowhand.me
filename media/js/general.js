@@ -16,9 +16,10 @@ $(function(){
 		{
 			if (item.type == 'PushEvent' && item.payload.size && item.url)
 			{
+				console.log(item);
 				commits.push([
 					$('<a class="tweet_avatar"></a>').attr('href', 'https://github.com/'+ item.actor).html(
-						$('<img width="32" height="32" />').attr('src', 'http://www.gravatar.com/avatar/'+ item.payload.actor_gravatar +'?s=32')
+						$('<img width="32" height="32" />').attr('src', 'http://www.gravatar.com/avatar/'+ item.actor_attributes.gravatar_id +'?s=32')
 					),
 					$('<span class="tweet_time"></span>').html(
 							$('<a></a>')
@@ -28,7 +29,7 @@ $(function(){
 					),
 					'<span class="tweet_text">'
 						+ item.payload.size + ' commit'+ (item.payload.size != 1 ? 's' : '') +' to '
-						+ '<a href="https://github.com/'+ item.payload.repo +'">'+ item.payload.repo + '</a>' +
+						+ '<a href="'+ item.repository.url +'">'+ item.repository.name + '</a>' +
 					'</span>'
 				]);
 			}
