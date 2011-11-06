@@ -25,8 +25,9 @@ class View_Home extends Kostache {
 		$this->base    = Kohana::$base_url;
 		$this->charset = Kohana::$charset;
 
-		$this->environment = Kohana::$environment;
 		$this->production  = (Kohana::$environment === Kohana::PRODUCTION);
+		$this->environment = $this->production ? 'live' : 'local';
+		$this->kohana      = Kohana::VERSION;
 
 		return parent::render();
 	}
