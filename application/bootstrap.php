@@ -57,10 +57,10 @@ I18n::lang('en-us');
 
 //-- Configuration and initialization -----------------------------------------
 
-if ($env = getenv("KOHANA_ENV"))
+if ($env = getenv('KOHANA_ENV'))
 {
 	// Set Kohana::$environment if 'KOHANA_ENV' has been supplied
-	Kohana::$environment = $env;
+	Kohana::$environment = constant('Kohana::'.strtoupper($env));
 }
 
 /**
