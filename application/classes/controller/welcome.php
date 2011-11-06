@@ -51,16 +51,20 @@ class Controller_Welcome extends Controller_Website {
 	{
 		try
 		{
+			$json = Request::factory('http://github.com/api/v2/json/repos/show/shadowhand')
+				->execute()
+				->body();
+
 			$projects = array(
 				'when' => time(),
-				'data' => Remote::get('http://github.com/api/v2/json/repos/show/shadowhand'),
+				'data' => $json,
 			);
 
 			Kohana::cache('github.projects', $projects);
 
 			if ($shutdown)
 			{
-				Kohana::$log->add(Kohana::INFO, 'Updated project list cache');
+				Kohana::$log->add(Log::INFO, 'Updated project list cache');
 			}
 		}
 		catch (Exception $e)
@@ -70,7 +74,7 @@ class Controller_Welcome extends Controller_Website {
 				throw $e;
 			}
 
-			Kohana::$log->add(Kohana::ERROR, Kohana::exception_text($e));
+			Kohana::$log->add(Log::ERROR, Kohana_Exception::text($e));
 		}
 	}
 

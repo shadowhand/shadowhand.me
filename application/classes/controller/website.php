@@ -8,7 +8,7 @@ abstract class Controller_Website extends Controller {
 	{
 		if ($this->view)
 		{
-			$this->request->response = $this->view;
+			$this->response->body($this->view);
 		}
 
 		return parent::after();
