@@ -20,6 +20,36 @@ abstract class View_Layout extends Kostache_Layout {
 		);
 	}
 
+	public function menu()
+	{
+		$links = array(
+			array(
+				'link' => URL::site(),
+				'title' => 'Home',
+			),
+			// array(
+			// 	'link' => Route::url('about'),
+			// 	'title' => 'About',
+			// ),
+			array(
+				'link' => Route::url('projects'),
+				'title' => 'Projects',
+			)
+		);
+
+		$active = Request::current()->url();
+
+		foreach ($links as $i => $data)
+		{
+			if ($data['link'] === $active)
+			{
+				$links[$i]['active'] = TRUE;
+			}
+		}
+
+		return $links;
+	}
+
 	public function render()
 	{
 		$this->base    = Kohana::$base_url;

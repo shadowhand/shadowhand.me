@@ -14,7 +14,7 @@
 
 	<link rel="stylesheet" href="media/less/css/typo.css">
 	<link rel="stylesheet" href="media/tweet/css/jquery.tweet.css">
-	<link rel="stylesheet" href="media/css/style.css?v=1.0">
+	<link rel="stylesheet" href="media/css/style.css?v=1.1">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script">
 
 	<script src="media/js/modernizr-1.6.min.js"></script>
@@ -25,16 +25,13 @@
 		<p class="intro">
 			i build web stuff, buy organic food, and drink a lot of tea.
 		</p>
-		{{!
 		<nav>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Contact</a></li>
+				{{#menu}}
+				<li{{#active}} class="active"{{/active}}><a href="{{link}}">{{title}}</a></li>
+				{{/menu}}
 			</ul>
 		</nav>
-		}}
 	</header>
 
 	<div id="main">
