@@ -24,7 +24,7 @@
 	url = https://github.com/shadowhand/bonafide.git
 [submodule "modules/oauth"]
 	path = modules/oauth
-	url = https://github.com/kohana/oauth.git
+	url = https://github.com/shadowhand/oauth.git
 [submodule "modules/apis"]
 	path = modules/apis
 	url = https://github.com/shadowhand/apis.git
@@ -36,7 +36,7 @@
 	url = https://github.com/shadowhand/demo.git
 [submodule "modules/purifier"]
 	path = modules/purifier
-	url = git://github.com/shadowhand/purifier.git
+	url = https://github.com/shadowhand/purifier.git
 [submodule "modules/pagination"]
 	path = modules/pagination
-	url = git://github.com/shadowhand/pagination.git
+	url = https://github.com/shadowhand/pagination.git
