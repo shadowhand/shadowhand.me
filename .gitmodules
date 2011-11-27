@@ -40,3 +40,6 @@
 [submodule "modules/pagination"]
 	path = modules/pagination
 	url = git://github.com/shadowhand/pagination.git
+[submodule "modules/membership"]
+	path = modules/membership
+	url = git://github.com/shadowhand/membership.git
