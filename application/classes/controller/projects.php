@@ -18,7 +18,7 @@ class Controller_Projects extends Controller_Website {
 
 	public function action_index()
 	{
-		$this->view = Kostache::factory('home')
+		$this->view = Kostache::factory('projects')
 			->bind('projects', $projects)
 			;
 
