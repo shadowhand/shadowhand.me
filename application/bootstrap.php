@@ -111,7 +111,7 @@ Kohana::modules(array(
 	// 'database'   => MODPATH.'database',   // Database access
 	'email'      => MODPATH.'email',      // Emailer
 	'kostache'   => MODPATH.'kostache',   // Mustache templates
-	// 'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
+	'uuid'       => MODPATH.'uuid',       // Universally Unique Identifiers
 	'oauth'      => MODPATH.'oauth',      // OAuth Authentication
 	'twitter'    => MODPATH.'apis/twitter', // Twitter
 	'github'     => MODPATH.'apis/github',  // Github

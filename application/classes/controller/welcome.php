@@ -10,6 +10,7 @@ class Controller_Welcome extends Controller_Website {
 			'bonafide' => Route::url('demos', array('controller' => 'bonafide')),
 			'apis'     => Route::url('demos', array('controller' => 'twitter')),
 			'purifier' => Route::url('demos', array('controller' => 'purifier')),
+			'uuid'     => Route::url('demos', array('controller' => 'uuid')),
 		);
 
 		return parent::before();
