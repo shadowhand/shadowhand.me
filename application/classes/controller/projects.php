@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Welcome extends Controller_Website {
+class Controller_Projects extends Controller_Website {
 
 	public $demos = array();
 
