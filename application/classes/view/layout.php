@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class View_Home extends Kostache {
+abstract class View_Layout extends Kostache {
 
 	public $base = '/';
 
@@ -32,4 +32,4 @@ class View_Home extends Kostache {
 		return parent::render();
 	}
 
-} // End Home
+}
