@@ -11,6 +11,7 @@ class Controller_Projects extends Controller_Website {
 			'apis'     => Route::url('demos', array('controller' => 'twitter')),
 			'purifier' => Route::url('demos', array('controller' => 'purifier')),
 			'uuid'     => Route::url('demos', array('controller' => 'uuid')),
+			'openid'   => Route::url('demos', array('controller' => 'openid')),
 		);
 
 		return parent::before();
