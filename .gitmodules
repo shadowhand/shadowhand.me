@@ -40,3 +40,6 @@
 [submodule "modules/pagination"]
 	path = modules/pagination
 	url = https://github.com/shadowhand/pagination.git
+[submodule "modules/openid"]
+	path = modules/openid
+	url = https://github.com/shadowhand/openid.git
