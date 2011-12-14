@@ -1,36 +1,7 @@
-html { background: #eee; }
-body { width: 62em; margin: 0 auto; padding: 2em; border: solid 0 #ddd; border-width: 1em 0; }
-#head { color: #777; }
-#head h1 { font-family: 'Dancing Script', Helvetica, Arial, sans-serif; font-size: 3em; }
-#head nav ul { margin: 0 0 1em; padding: 0; }
-#head nav li { display: inline-block; margin: 0; margin-right: 1em; padding: 0; }
-#head nav a { display: block; text-transform: uppercase; font-size: 0.8em; color: #118; padding: 0.2em 1.4em; background: #ddd; text-decoration: none; }
-#head nav a:hover { text-decoration: underline; }
-#main { float: left; width: 30em; }
-#side { float: right; width: 30em; }
-	#side .pledgie {
-		float: right;
-		margin: 0 0 0.2em 1em;
-	}
-footer { clear: both; padding: 1em 0; font-size: 0.8em; text-align: right; }
-footer span { float: left; }
-
-#fork-me {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	width: 149px;
-	height: 149px;
-	background: transparent url(http://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png) 0 0 no-repeat;
-	text-align: left;
-	text-indent: -3000em;
+#header h1 small,
+#header h1 span {
+	font-weight: normal;
 }
-
-.project { padding: 1em; margin: 0 -1em; }
-.project:nth-child(odd) { background: #fff; }
-.project .title { margin: 0 0 0.4em; text-align: right; overflow: auto; }
-.project .title a { float: left; }
-.project .title .language { font-size: 0.6em; }
-.project .meta .website { float: right; }
+	#header h1 span.and {
+		font-style: italic;
+	}
