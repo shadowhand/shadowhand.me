@@ -20,6 +20,16 @@ abstract class View_Layout extends Kostache_Layout {
 		);
 	}
 
+	public function link_projects()
+	{
+		return Route::url('projects');
+	}
+
+	public function link_demos()
+	{
+		return Route::url('demos');
+	}
+
 	public function social()
 	{
 		return array(
@@ -66,7 +76,7 @@ abstract class View_Layout extends Kostache_Layout {
 			array(
 				'name'  => 'google-talk',
 				'title' => 'Google Talk',
-				'link'  => 'gtalk:chat?jid=woody.gilk@gmail.com',
+				'link'  => 'xmpp:woody.gilk@gmail.com',
 			),
 			array(
 				'name'  => 'skype',

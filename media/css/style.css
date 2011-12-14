@@ -1,7 +1,7 @@
-#header h1 small,
-#header h1 span {
+#header h1 small {
 	font-weight: normal;
 }
-	#header h1 span.and {
+	#header h1 small.and {
 		font-style: italic;
+		font-size: 1.2em;
 	}

@@ -1,31 +1,38 @@
 html {
-	background: #e9e6e3;
+	background: #e9e6e3 url(../img/background.png) 20px 20px no-repeat;
+	background-attachment: fixed;
 	color: #14110d;
 	height: 100%;
 }
 
-body {
+.row {
 	margin: 0;
-	min-height: 100%;
-}
-
-div.max {
-	min-height: 100%;
-}
-
-div.bg {
-	background: transparent url(../img/background.png) 0 60px no-repeat;
 }
 
 #header {
 	min-height: 630px;
 }
 	#header h1 {
-		display: none;
+		position: fixed;
+		top: 380px;
+		left: 105px;
+		width: 260px;
 	}
+		#header h1 a {
+			display: block;
+			height: 99px;
+			background: transparent url(../img/shadowhand.png) 0 0 no-repeat;
+			opacity: 0.9;
+		}
+		#header h1 a:hover {
+			opacity: 1;
+		}
+		#header h1 span {
+			display: none;
+		}
 
 #main {
-	margin-top: 15px;
+	margin-top: 0;
 }
 
 	#social {
@@ -48,6 +55,12 @@ div.bg {
 			#social li:last-child {
 				margin-right: 0;
 			}
+				#social a {
+					opacity: 0.8;
+				}
+				#social a:hover {
+					opacity: 1;
+				}
 
 	#content {
 		margin-top: 1em;
@@ -56,6 +69,17 @@ div.bg {
 		background: #edebe9;
 		box-shadow: 0 0 0.6em #cac8c5;
 	}
+		#content h1,
+		#content h2,
+		#content h3,
+		#content h4,
+		#content h5,
+		#content h6 {
+			font-family: 'Cabin';
+			font-weight: normal;
+			text-transform: lowercase;
+			font-variant: small-caps;
+		}
 
 	#footer {
 		color: #88837b;
@@ -69,14 +93,29 @@ div.bg {
 
 @media handheld, only screen and (max-width: 767px) {
 
-	div.bg {
-		margin-top: -360px;
-		background-position: 0 10px;
+	html {
+		background-position: 50% 20px;
 	}
 
 	#header {
-		min-height: 430px;
+		min-height: 100px;
 	}
+		#header h1 {
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 0 auto;
+		}
+
+	#social ul {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+		#social li {
+			float: none;
+			display: inline;
+		}
 
 	#footer {
 		text-align: center;

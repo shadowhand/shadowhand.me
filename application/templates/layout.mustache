@@ -37,9 +37,13 @@
 		<div class="sixcol max">
 			<div id="header">
 				<h1>
-					<small>hello, my name is</small><br/>
-					SHADOWHAND<br/>
-					<span class="and">&amp;</span> <small>i like to build the internet</small>
+					<a href="{{base}}">
+						<span>
+							<small>hello, my name is</small><br/>
+							SHADOWHAND<br/>
+							<small class="and">&amp;</small> <small>i like to build the internet</small>
+						</span>
+					</a>
 				</h1>
 				<span class="fail">&nbsp;</span>
 			</div>
@@ -58,7 +62,8 @@
 				</div>
 				<div id="footer">
 					<span>copyright &copy; 2011 shadowhand</span>
-					status: {{environment}} // php: {{php}} // kohana: {{kohana}}
+					status: {{environment}} // php: {{php}} // kohana: {{kohana}}<br/>
+					hosted by <a href="http://www.webfaction.com/?affiliate=shadowhand">webfaction</a>
 				</div>
 			</div>
 		</div>
@@ -68,20 +73,6 @@
 <!-- <a id="fork-me" href="http://github.com/shadowhand/shadowhand.me">fork me on github!</a> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="media/js/jquery.min.js"%3E%3C/script%3E'))</script>
-<script>
-$(function()
-{
-	var $header = $('div.bg');
-	var start   = parseInt($header.css('background-position-y'));
-	var offset  = 10;
-	$(window).scroll(function()
-	{
-		var top  = $(this).scrollTop();
-		var next = (top > start) ? (top + offset) : start;
-		$header.stop(true, false).animate({'background-position-y': next}, 200);
-	});
-});
-</script>
 <!-- <script src="media/tweet/js/jquery.tweet.js"></script> -->
 <!-- <script src="media/clockwinder/src/jquery.clockwinder.js"></script> -->
 <!-- <script src="media/js/general.js"></script> -->
