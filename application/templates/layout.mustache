@@ -9,66 +9,78 @@
 	<meta name="description" content="woody gilk, newood, shadowhand, programmer, geek, kohana framework, grand marais, minnesota, mn">
 	<meta name="author" content="Woody Gilk">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="shortcut icon" href="media/img/favicon.png">
 	<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
 
-	<link rel="stylesheet" href="media/less/css/typo.css">
-	<link rel="stylesheet" href="media/tweet/css/jquery.tweet.css">
-	<link rel="stylesheet" href="media/css/style.css?v=1.1">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dancing+Script">
+	<!-- 1140px Grid styles for IE -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="media/css/ie.css" media="screen"><![endif]-->
+	<!-- The 1140px Grid - http://cssgrid.net/ -->
+	<link rel="stylesheet" href="media/css/1140.css" media="screen">
 
+	<!-- LeSS typography -->
+	<link rel="stylesheet" href="media/less/css/typo.css" media="all">
+
+	<!-- Tipsy -->
+	<link rel="stylesheet" href="media/css/jquery.tipsy.css" media="all">
+
+	<!-- Site styles -->
+	<link rel="stylesheet" href="media/css/style.css?v=2.0" media="all">
+	<link rel="stylesheet" href="media/css/screen.css?v=2.0" media="screen">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Cabin">
+
+	<!-- Modernizr -->
 	<script src="media/js/modernizr-1.6.min.js"></script>
 </head>
-<body class="home">
-	<header id="head">
-		<h1>i am shadowhand</h1>
-		<p class="intro">
-			i build web stuff, buy organic food, and drink a lot of tea.
-		</p>
-		<nav>
-			<ul>
-				{{#menu}}
-				<li{{#active}} class="active"{{/active}}><a href="{{link}}">{{title}}</a></li>
-				{{/menu}}
-			</ul>
-		</nav>
-	</header>
+<body>
 
-	<div id="main">
-		{{>content}}
+<div class="container max">
+	<div class="row max bg">
+		<div class="sixcol max">
+			<div id="header">
+				<h1>
+					<a href="{{base}}">
+						<span>
+							<small>hello, my name is</small><br/>
+							SHADOWHAND<br/>
+							<small class="and">&amp;</small> <small>i like to build the internet</small>
+						</span>
+					</a>
+				</h1>
+				<span class="fail">&nbsp;</span>
+			</div>
+		</div>
+		<div class="sixcol last">
+			<div id="main">
+				<div id="social">
+					<ul class="social">
+						{{#social}}
+						<li class="social-{{name}}">
+							<a href="{{link}}" title="{{title}}"><img src="media/img/icon/{{name}}-24x24.png" alt="{{title}}"></a>
+						</li>
+						{{/social}}
+					</ul>
+				</div>
+				<div id="content">
+					{{>content}}
+				</div>
+				<div id="footer">
+					<span>copyright &copy; 2011 shadowhand</span>
+					status: {{environment}} v{{version}} // php: {{php}} // kohana: {{kohana}}<br/>
+					hosted by <a href="http://www.webfaction.com/?affiliate=shadowhand">webfaction</a>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 
-	<aside id="side">
-		<p class="shameless">
-			{{#pledgie}}
-			<a href="{{link}}" class="pledgie"><img src="{{image}}" width="149" height="37" alt="Contribute to my Pledgie account"></a>
-			{{/pledgie}}
-			if you like my stuff, maybe you could <a href="http://amzn.com/w/1474H3P2204L8">buy me something</a> or donate a little.
-		</p>
-
-		<h6>twitter feed</h6>
-		<div id="tweets" class="query">
-			<p><a href="http://twitter.com/shadowhand">follow me on twitter</a></p>
-		</div>
-
-		<h6>github activity</h6>
-		<div id="github" class="query">
-			<p><a href="http://github.com/shadowhand">my github activity</a></p>
-		</div>
-	</aside>
-
-	<footer>
-		<p class="top bottom">
-			<span>copyright &copy; 2011 shadowhand</span>
-			<small>status: {{environment}} // php: {{php}} // kohana: {{kohana}}</small>
-		</p>
-		<a id="fork-me" href="http://github.com/shadowhand/shadowhand.me">fork me on github!</a>
-	</footer>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<!-- <a id="fork-me" href="http://github.com/shadowhand/shadowhand.me">fork me on github!</a> -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>!window.jQuery && document.write(unescape('%3Cscript src="media/js/jquery.min.js"%3E%3C/script%3E'))</script>
-<script src="media/tweet/js/jquery.tweet.js"></script>
-<script src="media/clockwinder/src/jquery.clockwinder.js"></script>
+<!-- <script src="media/tweet/js/jquery.tweet.js"></script> -->
+<!-- <script src="media/clockwinder/src/jquery.clockwinder.js"></script> -->
+<script src="media/js/jquery.tipsy.js"></script>
 <script src="media/js/general.js"></script>
 {{#production}}
 <script>
