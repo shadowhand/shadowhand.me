@@ -8,9 +8,12 @@ abstract class View_Layout extends Kostache_Layout {
 
 	public $environment = 'development';
 
+	public $version = APP_VERSION;
+
 	public $production = FALSE;
 
 	public $php = PHP_VERSION;
+
 
 	public function pledgie()
 	{
