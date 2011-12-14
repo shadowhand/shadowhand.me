@@ -64,6 +64,11 @@ if ($env = getenv('KOHANA_ENV'))
 }
 
 /**
+ * Define the current application version.
+ */
+define('APP_VERSION', '2.0.0');
+
+/**
  * Initialize Kohana, setting the default options.
  *
  * The following options are available:
