@@ -1,3 +1,20 @@
+html {
+	color: #111;
+}
+
+a:link,
+a:visited {
+	color: #000;
+	text-decoration: underline;
+}
+a:hover {
+	color: #115;
+}
+a:active {
+	color: #111;
+	text-decoration: none;
+}
+
 #header h1 small {
 	font-weight: normal;
 }

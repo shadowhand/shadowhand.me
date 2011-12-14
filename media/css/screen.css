@@ -5,6 +5,10 @@ html {
 	height: 100%;
 }
 
+body {
+	padding: 2em 0 3em;
+}
+
 .row {
 	margin: 0;
 }
@@ -22,7 +26,7 @@ html {
 			display: block;
 			height: 99px;
 			background: transparent url(../img/shadowhand.png) 0 0 no-repeat;
-			opacity: 0.9;
+			opacity: 0.8;
 		}
 		#header h1 a:hover {
 			opacity: 1;
@@ -31,65 +35,77 @@ html {
 			display: none;
 		}
 
-#main {
-	margin-top: 0;
+#social {
+	overflow: auto;
 }
-
-	#social {
-		overflow: auto;
+	#social ul {
+		display: table;
+		float: right;
+		margin: 0;
 	}
-		#social ul {
-			display: table !important;
-			display: block;
-			float: right;
+		#social li {
+			display: table-cell;
 			margin: 0;
+			padding: 0 1em 0 0;
+			line-height: 28px;
+			vertical-align: middle;
 		}
-			#social li {
-				display: table-cell !important;
-				float: none !important;
+		#social li:last-child {
+			padding-right: 0;
+		}
+		#social li * {
+			vertical-align: inherit;
+		}
+			#social a {
 				display: block;
-				float: right;
-				padding: 0 0.4em;
-				margin-right: 1em;
+				opacity: 0.6;
+				text-decoration: none;
 			}
-			#social li:last-child {
-				margin-right: 0;
+			#social a:hover {
+				opacity: 1;
 			}
-				#social a {
-					opacity: 0.8;
-				}
-				#social a:hover {
-					opacity: 1;
+				#social a img {
+					max-width: auto;
 				}
 
-	#content {
-		margin-top: 1em;
-		margin-bottom: 1em;
-		padding: 1em;
-		background: #edebe9;
-		box-shadow: 0 0 0.6em #cac8c5;
+#content {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 1em;
+	background: #edebe9;
+	box-shadow: 0 0 0.6em #cac8c5;
+}
+	#content h1,
+	#content h2,
+	#content h3,
+	#content h4,
+	#content h5,
+	#content h6 {
+		font-family: 'Cabin';
+		font-weight: normal;
+		text-transform: lowercase;
+		font-variant: small-caps;
 	}
-		#content h1,
-		#content h2,
-		#content h3,
-		#content h4,
-		#content h5,
-		#content h6 {
-			font-family: 'Cabin';
-			font-weight: normal;
-			text-transform: lowercase;
-			font-variant: small-caps;
-		}
 
-	#footer {
+#footer {
+	color: #88837b;
+	text-align: right;
+	font-size: 0.8em;
+}
+	#footer a {
 		color: #88837b;
-		text-align: right;
-		font-size: 0.8em;
-		margin-bottom: 2em;
 	}
-		#footer span {
-			float: left;
-		}
+	#footer span {
+		float: left;
+	}
+
+.project { padding: 1em; margin: 0 -1em; }
+.project:nth-child(even) { background: rgba(255, 255, 255, 0.25) !important; background: #fff;  }
+.project .title { margin: 0 0 0.4em; text-align: right; overflow: visible; }
+.project .title a { float: left; }
+.project .title .language { font-size: 0.8em; }
+.project .meta .website { float: right; }
+
 
 @media handheld, only screen and (max-width: 767px) {
 
@@ -112,10 +128,6 @@ html {
 		margin: 0 auto;
 		text-align: center;
 	}
-		#social li {
-			float: none;
-			display: inline;
-		}
 
 	#footer {
 		text-align: center;

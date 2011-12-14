@@ -53,7 +53,9 @@
 				<div id="social">
 					<ul class="social">
 						{{#social}}
-						<li class="social-name"><a href="{{link}}"><img src="media/img/icon/{{name}}-24x24.png" alt="{{title}}" title="{{title}}"></a></li>
+						<li class="social-{{name}}">
+							<a href="{{link}}" title="{{title}}"><img src="media/img/icon/{{name}}-24x24.png" alt="{{title}}"></a>
+						</li>
 						{{/social}}
 					</ul>
 				</div>
@@ -75,7 +77,7 @@
 <script>!window.jQuery && document.write(unescape('%3Cscript src="media/js/jquery.min.js"%3E%3C/script%3E'))</script>
 <!-- <script src="media/tweet/js/jquery.tweet.js"></script> -->
 <!-- <script src="media/clockwinder/src/jquery.clockwinder.js"></script> -->
-<!-- <script src="media/js/general.js"></script> -->
+<script src="media/js/general.js"></script>
 {{#production}}
 <script>
 var _gaq = [['_setAccount', 'UA-21978772-1'], ['_trackPageview']];
