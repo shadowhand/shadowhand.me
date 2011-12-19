@@ -121,6 +121,7 @@ Kohana::modules(array(
 	'openid'     => MODPATH.'openid',     // OpenID Authentication
 	'twitter'    => MODPATH.'apis/twitter', // Twitter
 	'github'     => MODPATH.'apis/github',  // Github
+	'mailchimp'  => MODPATH.'mailchimp',  // MailChimp
 	'purifier'   => MODPATH.'purifier',     // HTML Purifier
 	));
 
