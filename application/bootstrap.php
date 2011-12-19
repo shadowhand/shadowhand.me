@@ -66,7 +66,7 @@ if ($env = getenv('KOHANA_ENV'))
 /**
  * Define the current application version.
  */
-define('APP_VERSION', '2.0.0');
+define('APP_VERSION', '2.1.0');
 
 /**
  * Initialize Kohana, setting the default options.
@@ -121,6 +121,7 @@ Kohana::modules(array(
 	'openid'     => MODPATH.'openid',     // OpenID Authentication
 	'twitter'    => MODPATH.'apis/twitter', // Twitter
 	'github'     => MODPATH.'apis/github',  // Github
+	'mailchimp'  => MODPATH.'mailchimp',  // MailChimp
 	'purifier'   => MODPATH.'purifier',     // HTML Purifier
 	));
 

@@ -43,3 +43,6 @@
 [submodule "modules/openid"]
 	path = modules/openid
 	url = https://github.com/shadowhand/openid.git
+[submodule "modules/mailchimp"]
+	path = modules/mailchimp
+	url = https://github.com/shadowhand/mailchimp.git
