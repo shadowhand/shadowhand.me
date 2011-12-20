@@ -92,11 +92,6 @@ Kohana::init(array(
 Log::$write_on_add = TRUE;
 
 /**
- * Signed cookie salt.
- */
-Cookie::$salt = 'v,8mnGqBt}gbays?NX2L';
-
-/**
  * Attach the file write to logging. Multiple writers are supported.
  */
 Kohana::$log->attach(new Log_File(APPPATH.'logs'));
@@ -105,6 +100,11 @@ Kohana::$log->attach(new Log_File(APPPATH.'logs'));
  * Attach a file reader to config. Multiple readers are supported.
  */
 Kohana::$config->attach(new Config_File);
+
+/**
+ * Signed cookie salt.
+ */
+Cookie::$salt = Kohana::$config->load('website.cookie.salt');
 
 /**
  * Enable modules. Modules are referenced by a relative or absolute path.
