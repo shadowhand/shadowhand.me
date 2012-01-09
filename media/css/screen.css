@@ -103,6 +103,7 @@ body {
 .project:nth-child(even) { background: rgba(255, 255, 255, 0.25) !important; background: #fff;  }
 .project .title { margin: 0 0 0.4em; text-align: right; overflow: visible; }
 .project .title a { float: left; }
+.project .description { clear: both; }
 .project .title .language { font-size: 0.8em; }
 .project .meta .website { float: right; }
 
