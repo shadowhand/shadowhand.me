@@ -1,12 +1,13 @@
 html {
-	background: #e9e6e3 url(../img/background.png) 20px 20px no-repeat;
-	background-attachment: fixed;
+	background: #e9e6e3;
 	color: #14110d;
 	height: 100%;
 }
 
 body {
 	padding: 2em 0 3em;
+	background: transparent url(../img/background.png) 20px 20px no-repeat;
+	background-attachment: fixed;
 }
 
 .row {

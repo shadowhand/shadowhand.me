@@ -1,5 +1,13 @@
 jQuery(function($)
 {
+	$('html').noisy({
+		'intensity' : 0.18,
+		'size' : 200,
+		'opacity' : 0.08,
+		'fallback' : '',
+		'monochrome' : false
+	});
+
 	$('#social a').tipsy({ gravity: 's' });
 
 	$('#header h1').each(function()
