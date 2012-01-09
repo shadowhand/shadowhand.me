@@ -13,9 +13,6 @@
 [submodule "media/less"]
 	path = media/less
 	url = https://github.com/shadowhand/lessblue.git
-[submodule "media/clockwinder"]
-	path = media/clockwinder
-	url = https://github.com/intridea/jquery.clockwinder.git
 [submodule "modules/bonafide"]
 	path = modules/bonafide
 	url = https://github.com/shadowhand/bonafide.git

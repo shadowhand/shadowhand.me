@@ -1,12 +1,13 @@
 html {
-	background: #e9e6e3 url(../img/background.png) 20px 20px no-repeat;
-	background-attachment: fixed;
+	background: #e9e6e3;
 	color: #14110d;
 	height: 100%;
 }
 
 body {
 	padding: 2em 0 3em;
+	background: transparent url(../img/background.png) 20px 20px no-repeat;
+	background-attachment: fixed;
 }
 
 .row {
@@ -103,6 +104,7 @@ body {
 .project:nth-child(even) { background: rgba(255, 255, 255, 0.25) !important; background: #fff;  }
 .project .title { margin: 0 0 0.4em; text-align: right; overflow: visible; }
 .project .title a { float: left; }
+.project .description { clear: both; }
 .project .title .language { font-size: 0.8em; }
 .project .meta .website { float: right; }
 
