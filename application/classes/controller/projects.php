@@ -23,6 +23,10 @@ class Controller_Projects extends Controller_Website {
 			->bind('projects', $projects)
 			;
 
+        // disabled for now, need to change auth mode
+        // http://developer.github.com/v3/oauth/#oauth-authorizations-api
+        return;
+
 		if ($projects = Kohana::cache('github.projects', NULL, Date::YEAR))
 		{
 			if ((time() - Arr::get($projects, 'when')) > Date::HOUR)
