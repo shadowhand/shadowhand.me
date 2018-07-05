@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bundle exec jekyll build
+rsync -avzh $PWD/_site/ shadowhand.webfactional.com:webapps/shadowhand_www
