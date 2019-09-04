@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://www.shadowhand.me/* https://www.shadowhand.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://shadowhand-www.netlify.com/* https://www.shadowhand.com/:splat 301!
